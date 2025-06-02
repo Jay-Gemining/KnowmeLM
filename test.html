@@ -209,53 +209,8 @@
                                 </th>
                             </tr>
                         </thead>
-                        <tbody class="bg-white divide-y divide-gray-200">
-                            <tr class="hover:bg-gray-50 transition-colors group">
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <svg class="sf-symbol h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 16c1.669 0 3.218-.51 4.5-1.385A7.962 7.962 0 0114.5 16c1.255 0 2.443-.29 3.5-.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"></path></svg>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <div id="navigateToNotebookExisting" class="text-sm font-medium text-blue-600 hover:text-blue-800 cursor-pointer">营销活动策划</div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 hidden sm:table-cell">5 个来源</td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 hidden md:table-cell">2024年5月28日</td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 hidden lg:table-cell">Owner</td>
-                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                    <div class="relative">
-                                        <button class="text-gray-400 hover:text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity focus:opacity-100 more-actions-button">
-                                            <svg class="sf-symbol h-5 w-5" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path></svg>
-                                        </button>
-                                        <div class="dropdown-menu hidden origin-top-right right-0 mt-2 more-actions-menu">
-                                            <a href="#" class="dropdown-menu-item">重命名</a>
-                                            <a href="#" class="dropdown-menu-item">分享</a>
-                                            <a href="#" class="dropdown-menu-item text-red-600">删除</a>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="hover:bg-gray-50 transition-colors group">
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <svg class="sf-symbol h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"></path></svg>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="text-sm font-medium text-blue-600 hover:text-blue-800 cursor-pointer">课程学习笔记</div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 hidden sm:table-cell">12 个来源</td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 hidden md:table-cell">2024年5月25日</td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 hidden lg:table-cell">Owner</td>
-                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                    <div class="relative">
-                                        <button class="text-gray-400 hover:text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity focus:opacity-100 more-actions-button">
-                                            <svg class="sf-symbol h-5 w-5" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path></svg>
-                                        </button>
-                                         <div class="dropdown-menu hidden origin-top-right right-0 mt-2 more-actions-menu">
-                                            <a href="#" class="dropdown-menu-item">重命名</a>
-                                            <a href="#" class="dropdown-menu-item">分享</a>
-                                            <a href="#" class="dropdown-menu-item text-red-600">删除</a>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
+                        <tbody id="notebooksTableBody" class="bg-white divide-y divide-gray-200">
+                            <!-- Notebook rows will be dynamically inserted here -->
                         </tbody>
                     </table>
                 </div>
@@ -270,7 +225,7 @@
                             <button id="backToDashboard" class="p-2 rounded-md hover:bg-gray-200 mr-2">
                                  <svg class="sf-symbol h-5 w-5 text-gray-600" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
                             </button>
-                            <input type="text" value="Untitled notebook" class="text-lg font-medium text-gray-800 bg-transparent focus:outline-none focus:ring-1 focus:ring-blue-500 rounded-md px-2 py-1 -ml-2">
+                            <input type="text" id="notebookTitleInput" value="Untitled notebook" class="text-lg font-medium text-gray-800 bg-transparent focus:outline-none focus:ring-1 focus:ring-blue-500 rounded-md px-2 py-1 -ml-2">
                         </div>
                         <div class="flex items-center space-x-2 md:space-x-3">
                             <button class="flex items-center text-sm text-gray-600 hover:text-blue-600 transition-colors px-2 py-1.5 rounded-md hover:bg-gray-100">
@@ -387,7 +342,7 @@
                             <button class="text-xs bg-purple-100 text-purple-700 hover:bg-purple-200 px-2.5 py-1 rounded-full transition-colors">会议纪要</button>
                         </div>
                         <div class="flex-grow border border-gray-300 rounded-lg p-3">
-                            <textarea class="w-full h-full text-sm text-gray-700 focus:outline-none resize-none" placeholder="在此处键入您的笔记..."></textarea>
+                            <textarea id="notebookNotesTextarea" class="w-full h-full text-sm text-gray-700 focus:outline-none resize-none" placeholder="在此处键入您的笔记..."></textarea>
                         </div>
                     </div>
 
@@ -436,6 +391,59 @@
     </div>
 
     <script>
+        // Notebook structure: { id: string, title: string, notes: string, createdAt: string }
+        let currentNotebookId = null;
+        const savedNotebookId = sessionStorage.getItem('currentNotebookId');
+        if (savedNotebookId) {
+            currentNotebookId = savedNotebookId;
+        }
+
+        function generateNotebookId() {
+            return `notebook-${Date.now()}`;
+        }
+
+        function getNotebooks() {
+            try {
+                const notebooksJson = localStorage.getItem('notebooks');
+                if (notebooksJson) {
+                    return JSON.parse(notebooksJson);
+                }
+            } catch (error) {
+                console.error("Error getting notebooks from localStorage:", error);
+            }
+            return [];
+        }
+
+        function saveNotebooks(notebooksArray) {
+            try {
+                localStorage.setItem('notebooks', JSON.stringify(notebooksArray));
+            } catch (error) {
+                console.error("Error saving notebooks to localStorage:", error);
+            }
+        }
+
+        function getNotebookById(id) {
+            const notebooks = getNotebooks();
+            return notebooks.find(notebook => notebook.id === id);
+        }
+
+        function addNotebook(notebookObject) {
+            const notebooks = getNotebooks();
+            notebooks.push(notebookObject);
+            saveNotebooks(notebooks);
+        }
+
+        function updateNotebook(updatedNotebook) {
+            const notebooks = getNotebooks();
+            const index = notebooks.findIndex(notebook => notebook.id === updatedNotebook.id);
+            if (index !== -1) {
+                notebooks[index] = updatedNotebook;
+                saveNotebooks(notebooks);
+                return true;
+            }
+            return false;
+        }
+
         // 页面导航和通用交互逻辑
         const dashboardPage = document.getElementById('dashboardPage');
         const notebookPage = document.getElementById('notebookPage');
@@ -462,8 +470,149 @@
             if (pageElement) {
                 pageElement.classList.remove('hidden');
                 pageElement.classList.add('page-transition');
+                if (pageElement.id === 'dashboardPage') {
+                    renderDashboardNotebooks();
+                } else if (pageElement.id === 'notebookPage') {
+                    loadNotebookDataToPage();
+                }
             }
         }
+
+        function loadNotebookDataToPage() {
+            const titleInput = document.getElementById('notebookTitleInput');
+            const notesTextarea = document.getElementById('notebookNotesTextarea');
+
+            if (!titleInput || !notesTextarea) {
+                console.error("Notebook title input or notes textarea not found");
+                return;
+            }
+
+            if (currentNotebookId) {
+                const notebook = getNotebookById(currentNotebookId);
+                if (notebook) {
+                    titleInput.value = notebook.title;
+                    notesTextarea.value = notebook.notes;
+                } else {
+                    console.warn("Current notebook not found in localStorage. ID:", currentNotebookId);
+                    titleInput.value = "Untitled Notebook";
+                    notesTextarea.value = "";
+                }
+            } else {
+                // Default state if no notebook is active (e.g., direct navigation or error)
+                titleInput.value = "Untitled Notebook";
+                notesTextarea.value = "";
+                console.log("No currentNotebookId set. Displaying default state for notebook page.");
+            }
+        }
+
+        function saveCurrentNotebookData() {
+            if (!currentNotebookId) {
+                // console.warn("No currentNotebookId set. Cannot save data.");
+                // This can happen if user types before a notebook is formally created/loaded
+                // Or if they navigate to the page directly without an active notebook.
+                // For now, we won't create a new notebook here, just prevent saving.
+                return;
+            }
+
+            const notebook = getNotebookById(currentNotebookId);
+            if (notebook) {
+                const titleInput = document.getElementById('notebookTitleInput');
+                const notesTextarea = document.getElementById('notebookNotesTextarea');
+                
+                notebook.title = titleInput.value;
+                notebook.notes = notesTextarea.value;
+                
+                if (updateNotebook(notebook)) {
+                    // console.log("Notebook data saved for ID:", currentNotebookId);
+                } else {
+                    // console.error("Failed to save notebook data for ID:", currentNotebookId);
+                }
+            } else {
+                // console.warn("Could not find notebook to save. ID:", currentNotebookId);
+            }
+        }
+
+
+        function renderDashboardNotebooks() {
+            const notebooksTableBody = document.getElementById('notebooksTableBody');
+            if (!notebooksTableBody) return;
+
+            const notebooks = getNotebooks();
+            notebooksTableBody.innerHTML = ''; // Clear existing rows
+
+            if (notebooks.length === 0) {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `<td colspan="6" class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 text-center">No notebooks yet. Click '新建' to create one.</td>`;
+                notebooksTableBody.appendChild(tr);
+            } else {
+                notebooks.forEach(notebook => {
+                    const tr = document.createElement('tr');
+                    tr.classList.add('hover:bg-gray-50', 'transition-colors', 'group');
+                    
+                    // Icon
+                    const iconTd = document.createElement('td');
+                    iconTd.classList.add('px-6', 'py-4', 'whitespace-nowrap');
+                    iconTd.innerHTML = `<svg class="sf-symbol h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 16c1.669 0 3.218-.51 4.5-1.385A7.962 7.962 0 0114.5 16c1.255 0 2.443-.29 3.5-.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"></path></svg>`;
+                    tr.appendChild(iconTd);
+
+                    // Title
+                    const titleTd = document.createElement('td');
+                    titleTd.classList.add('px-6', 'py-4', 'whitespace-nowrap');
+                    const titleDiv = document.createElement('div');
+                    titleDiv.classList.add('text-sm', 'font-medium', 'text-blue-600', 'hover:text-blue-800', 'cursor-pointer', 'notebook-link');
+                    titleDiv.textContent = notebook.title;
+                    titleDiv.setAttribute('data-notebook-id', notebook.id);
+                    // titleDiv.addEventListener('click', () => { /* Navigate to notebook page, implemented later */ });
+                    titleTd.appendChild(titleDiv);
+                    tr.appendChild(titleTd);
+
+                    // Source count
+                    const sourcesTd = document.createElement('td');
+                    sourcesTd.classList.add('px-6', 'py-4', 'whitespace-nowrap', 'text-sm', 'text-gray-500', 'hidden', 'sm:table-cell');
+                    sourcesTd.textContent = `${notebook.sources ? notebook.sources.length : 0} Sources`;
+                    tr.appendChild(sourcesTd);
+
+                    // Creation date
+                    const dateTd = document.createElement('td');
+                    dateTd.classList.add('px-6', 'py-4', 'whitespace-nowrap', 'text-sm', 'text-gray-500', 'hidden', 'md:table-cell');
+                    dateTd.textContent = new Date(notebook.createdAt).toLocaleDateString();
+                    tr.appendChild(dateTd);
+
+                    // Role
+                    const roleTd = document.createElement('td');
+                    roleTd.classList.add('px-6', 'py-4', 'whitespace-nowrap', 'text-sm', 'text-gray-500', 'hidden', 'lg:table-cell');
+                    roleTd.textContent = 'Owner'; // Placeholder
+                    tr.appendChild(roleTd);
+
+                    // Actions
+                    const actionsTd = document.createElement('td');
+                    actionsTd.classList.add('px-6', 'py-4', 'whitespace-nowrap', 'text-right', 'text-sm', 'font-medium');
+                    actionsTd.innerHTML = `
+                        <div class="relative">
+                            <button class="text-gray-400 hover:text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity focus:opacity-100 more-actions-button" data-notebook-id="${notebook.id}">
+                                <svg class="sf-symbol h-5 w-5" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path></svg>
+                            </button>
+                            <div class="dropdown-menu hidden origin-top-right right-0 mt-2 more-actions-menu">
+                                <a href="#" class="dropdown-menu-item rename-notebook-button" data-notebook-id="${notebook.id}">重命名</a>
+                                <a href="#" class="dropdown-menu-item share-notebook-button" data-notebook-id="${notebook.id}">分享</a>
+                                <a href="#" class="dropdown-menu-item text-red-600 delete-notebook-button" data-notebook-id="${notebook.id}">删除</a>
+                            </div>
+                        </div>`;
+                    tr.appendChild(actionsTd);
+                    
+                    notebooksTableBody.appendChild(tr);
+                });
+                // Re-initialize dropdowns for the newly added "more-actions-button"
+                document.querySelectorAll('.more-actions-button').forEach(button => {
+                    const menu = button.nextElementSibling;
+                    if (!button.dataset.dropdownInitialized) { // Avoid re-attaching listeners
+                        setupDropdown(button, menu);
+                        button.dataset.dropdownInitialized = true;
+                    }
+                });
+            }
+        }
+
 
         function toggleModal(modalElement, show) {
             if (show) {
@@ -479,7 +628,22 @@
         
         // 导航逻辑
         if (navigateToNotebookNew) {
-            navigateToNotebookNew.addEventListener('click', () => showPage(notebookPage));
+            navigateToNotebookNew.addEventListener('click', () => {
+                const newNotebookId = generateNotebookId();
+                const newNotebook = {
+                    id: newNotebookId,
+                    title: "Untitled Notebook " + new Date().toLocaleDateString(),
+                    notes: "",
+                    createdAt: new Date().toISOString(),
+                    sources: [], // Initialize with empty sources
+                    chatHistory: [] // Initialize with empty chat history
+                };
+                addNotebook(newNotebook);
+                currentNotebookId = newNotebookId;
+                sessionStorage.setItem('currentNotebookId', currentNotebookId);
+                // Potentially load this notebook's data into notebookPage elements here
+                showPage(notebookPage);
+            });
         }
         if (navigateToNotebookExisting) {
              navigateToNotebookExisting.addEventListener('click', () => showPage(notebookPage));
@@ -581,8 +745,47 @@
         });
 
 
-        // 初始显示仪表盘
-        showPage(dashboardPage);
+        // Initial page load logic
+        if (currentNotebookId) {
+            const activeNotebook = getNotebookById(currentNotebookId);
+            if (activeNotebook) {
+                showPage(notebookPage); // Load notebook page if a valid current ID exists
+            } else {
+                // If ID from session is invalid (e.g. notebook deleted elsewhere)
+                currentNotebookId = null; 
+                sessionStorage.removeItem('currentNotebookId');
+                showPage(dashboardPage); // Fallback to dashboard
+            }
+        } else {
+            showPage(dashboardPage); // Default to dashboard if no current ID
+        }
+
+        // Event listener for navigating to existing notebooks from dashboard
+        const notebooksTableBody = document.getElementById('notebooksTableBody');
+        if (notebooksTableBody) {
+            notebooksTableBody.addEventListener('click', (event) => {
+                const notebookLink = event.target.closest('.notebook-link');
+                if (notebookLink) {
+                    const notebookId = notebookLink.getAttribute('data-notebook-id');
+                    if (notebookId) {
+                        currentNotebookId = notebookId;
+                        sessionStorage.setItem('currentNotebookId', currentNotebookId);
+                        showPage(notebookPage);
+                    }
+                }
+            });
+        }
+
+        // Event listeners for saving notebook title and notes
+        const notebookTitleInput = document.getElementById('notebookTitleInput');
+        const notebookNotesTextarea = document.getElementById('notebookNotesTextarea');
+
+        if (notebookTitleInput) {
+            notebookTitleInput.addEventListener('input', saveCurrentNotebookData);
+        }
+        if (notebookNotesTextarea) {
+            notebookNotesTextarea.addEventListener('input', saveCurrentNotebookData);
+        }
 
         // 新增：聊天逻辑
         const chatInput = document.getElementById('chatInput');
