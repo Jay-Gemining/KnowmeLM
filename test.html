@@ -209,53 +209,8 @@
                                 </th>
                             </tr>
                         </thead>
-                        <tbody class="bg-white divide-y divide-gray-200">
-                            <tr class="hover:bg-gray-50 transition-colors group">
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <svg class="sf-symbol h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 16c1.669 0 3.218-.51 4.5-1.385A7.962 7.962 0 0114.5 16c1.255 0 2.443-.29 3.5-.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"></path></svg>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <div id="navigateToNotebookExisting" class="text-sm font-medium text-blue-600 hover:text-blue-800 cursor-pointer">营销活动策划</div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 hidden sm:table-cell">5 个来源</td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 hidden md:table-cell">2024年5月28日</td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 hidden lg:table-cell">Owner</td>
-                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                    <div class="relative">
-                                        <button class="text-gray-400 hover:text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity focus:opacity-100 more-actions-button">
-                                            <svg class="sf-symbol h-5 w-5" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path></svg>
-                                        </button>
-                                        <div class="dropdown-menu hidden origin-top-right right-0 mt-2 more-actions-menu">
-                                            <a href="#" class="dropdown-menu-item">重命名</a>
-                                            <a href="#" class="dropdown-menu-item">分享</a>
-                                            <a href="#" class="dropdown-menu-item text-red-600">删除</a>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="hover:bg-gray-50 transition-colors group">
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <svg class="sf-symbol h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"></path></svg>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="text-sm font-medium text-blue-600 hover:text-blue-800 cursor-pointer">课程学习笔记</div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 hidden sm:table-cell">12 个来源</td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 hidden md:table-cell">2024年5月25日</td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 hidden lg:table-cell">Owner</td>
-                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                    <div class="relative">
-                                        <button class="text-gray-400 hover:text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity focus:opacity-100 more-actions-button">
-                                            <svg class="sf-symbol h-5 w-5" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path></svg>
-                                        </button>
-                                         <div class="dropdown-menu hidden origin-top-right right-0 mt-2 more-actions-menu">
-                                            <a href="#" class="dropdown-menu-item">重命名</a>
-                                            <a href="#" class="dropdown-menu-item">分享</a>
-                                            <a href="#" class="dropdown-menu-item text-red-600">删除</a>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
+                        <tbody class="bg-white divide-y divide-gray-200" id="dashboardTableBody">
+                            <!-- Notebook rows will be dynamically inserted here -->
                         </tbody>
                     </table>
                 </div>
@@ -270,7 +225,7 @@
                             <button id="backToDashboard" class="p-2 rounded-md hover:bg-gray-200 mr-2">
                                  <svg class="sf-symbol h-5 w-5 text-gray-600" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
                             </button>
-                            <input type="text" value="Untitled notebook" class="text-lg font-medium text-gray-800 bg-transparent focus:outline-none focus:ring-1 focus:ring-blue-500 rounded-md px-2 py-1 -ml-2">
+                            <input type="text" id="notebookTitleInput" value="Untitled notebook" class="text-lg font-medium text-gray-800 bg-transparent focus:outline-none focus:ring-1 focus:ring-blue-500 rounded-md px-2 py-1 -ml-2">
                         </div>
                         <div class="flex items-center space-x-2 md:space-x-3">
                             <button class="flex items-center text-sm text-gray-600 hover:text-blue-600 transition-colors px-2 py-1.5 rounded-md hover:bg-gray-100">
@@ -440,11 +395,12 @@
         const dashboardPage = document.getElementById('dashboardPage');
         const notebookPage = document.getElementById('notebookPage');
         const addSourceModal = document.getElementById('addSourceModal');
+        const notebookTitleInput = document.getElementById('notebookTitleInput');
 
         const navigateToNotebookNew = document.getElementById('navigateToNotebookNew');
-        const navigateToNotebookExisting = document.getElementById('navigateToNotebookExisting'); // Example for existing item
+        // const navigateToNotebookExisting = document.getElementById('navigateToNotebookExisting'); // Removed as rows are dynamic
         const backToDashboard = document.getElementById('backToDashboard');
-        
+        // General UI elements
         const openAddSourceModalButton = document.getElementById('openAddSourceModal');
         const closeAddSourceModalButton = document.getElementById('closeAddSourceModal');
         const uploadSourceFromChatButton = document.getElementById('uploadSourceFromChat');
@@ -459,10 +415,71 @@
         function showPage(pageElement) {
             dashboardPage.classList.add('hidden');
             notebookPage.classList.add('hidden');
+
+            if (pageElement === notebookPage) {
+                loadNotebookContent();
+            }
+
             if (pageElement) {
                 pageElement.classList.remove('hidden');
                 pageElement.classList.add('page-transition');
             }
+        }
+
+        function loadNotebookContent() {
+            const localChatBox = document.getElementById('chatBox');
+            const localNotebookTitleInput = document.getElementById('notebookTitleInput');
+
+            if (!localChatBox || !localNotebookTitleInput) {
+                console.error("Chatbox or Title Input not found for notebook page.");
+                return;
+            }
+            localChatBox.innerHTML = ''; // Clear previous messages
+
+            if (!currentNotebookId) { // New notebook scenario
+                // console.log("Loading content for new notebook.");
+                const newNotebook = addNotebook("Untitled notebook"); // Create and save new notebook
+                currentNotebookId = newNotebook.id; // Set current ID
+                localNotebookTitleInput.value = "Untitled notebook"; // Set title in input
+                displayInitialChatPlaceholder(localChatBox); // Show placeholder message
+            } else { // Existing notebook scenario
+                // console.log(`Loading content for existing notebook ID: ${currentNotebookId}`);
+                const notebooks = getNotebooks();
+                const currentNotebook = notebooks.find(nb => nb.id === currentNotebookId);
+                if (currentNotebook) {
+                    localNotebookTitleInput.value = currentNotebook.title; // Set title from loaded notebook
+                    const messages = getNotebookMessages(currentNotebookId); // Load messages
+                    if (messages.length > 0) {
+                        messages.forEach(msg => addMessageToChatBoxDOM(msg.text, msg.isUser, localChatBox, false)); // Display messages, don't clear placeholder for each
+                        // Clear placeholder once after all messages are loaded, if any message exists.
+                        const placeholder = localChatBox.querySelector('.initial-chat-placeholder');
+                        if (placeholder) placeholder.remove();
+                    } else {
+                        displayInitialChatPlaceholder(localChatBox); // No messages, show placeholder
+                    }
+                } else {
+                    // This case should ideally not be reached if UI is consistent
+                    console.warn(`Notebook with ID ${currentNotebookId} not found. Treating as new.`);
+                    currentNotebookId = null; // Reset ID
+                    const newNotebook = addNotebook("Untitled Notebook (Fallback)"); // Create a new one
+                    currentNotebookId = newNotebook.id;
+                    localNotebookTitleInput.value = "Untitled Notebook (Fallback)";
+                    displayInitialChatPlaceholder(localChatBox);
+                }
+            }
+        }
+
+        // Displays a placeholder message in the chat box if it's empty.
+        function displayInitialChatPlaceholder(targetChatBox) {
+            // Only add placeholder if chatBox is truly empty and no placeholder already exists.
+            if (targetChatBox.children.length === 0 && !targetChatBox.querySelector('.initial-chat-placeholder')) {
+                targetChatBox.innerHTML = `
+                <div class="flex items-start initial-chat-placeholder">
+                    <img class="h-8 w-8 rounded-full object-cover mr-3" src="https://placehold.co/40x40/E2E8F0/A0AEC0?text=U" alt="用户头像">
+                    <div class="bg-blue-100 p-3 rounded-lg max-w-[80%]">
+                        <p class="text-sm text-gray-800">你好！请上传来源文件来开始对话。</p>
+                    </div>
+                </div>`;
         }
 
         function toggleModal(modalElement, show) {
@@ -479,13 +496,20 @@
         
         // 导航逻辑
         if (navigateToNotebookNew) {
-            navigateToNotebookNew.addEventListener('click', () => showPage(notebookPage));
+            navigateToNotebookNew.addEventListener('click', () => {
+                currentNotebookId = null; // Indicate new notebook
+                showPage(notebookPage);
+                // Potentially clear notebook page content or set title to "New Notebook"
+            });
         }
-        if (navigateToNotebookExisting) {
-             navigateToNotebookExisting.addEventListener('click', () => showPage(notebookPage));
-        }
+        // Event listener for navigateToNotebookExisting is removed as it's part of dynamic rows now
+
         if (backToDashboard) {
-            backToDashboard.addEventListener('click', () => showPage(dashboardPage));
+            backToDashboard.addEventListener('click', () => {
+                currentNotebookId = null; // Clear current notebook context
+                showPage(dashboardPage);
+                renderDashboardTable(); // Refresh dashboard table when going back
+            });
         }
 
         // 添加来源模态框逻辑
@@ -560,41 +584,55 @@
         setupDropdown(userAvatarButtonNotebook, userMenuNotebook);
         setupDropdown(sortButton, sortMenu);
 
-        // "更多操作" 下拉菜单 (列表项)
-        document.querySelectorAll('.more-actions-button').forEach(button => {
-            const menu = button.nextElementSibling; // Assumes menu is the next sibling
-            setupDropdown(button, menu);
-        });
+        // "更多操作" 下拉菜单 (列表项) - This specific selector might need adjustment if it was only for static rows
+        // document.querySelectorAll('.more-actions-button').forEach(button => {
+        //     const menu = button.nextElementSibling;
+        //     setupDropdown(button, menu);
+        // });
+        // General dropdown closing logic remains useful
 
-        // 点击页面其他地方关闭打开的下拉菜单
+        // 点击页面其他地方关闭打开的下拉菜单 (Generic dropdown closer)
         document.addEventListener('click', (event) => {
             const openMenus = document.querySelectorAll('.dropdown-menu:not(.hidden)');
             openMenus.forEach(menu => {
-                // Check if the click was outside the menu and its button
-                const buttonId = menu.id.replace('Menu', 'Button'); // Heuristic to find related button
-                const relatedButton = document.getElementById(buttonId) || menu.previousElementSibling; // Fallback for more-actions
-                
-                if (!menu.contains(event.target) && relatedButton && !relatedButton.contains(event.target)) {
-                     menu.classList.add('hidden');
+                const relatedButton = menu.previousElementSibling; // Common pattern for button then menu
+                const owningCell = menu.closest('td'); // Check if click is within the cell of an action button
+
+                if (!menu.contains(event.target) && (relatedButton && !relatedButton.contains(event.target))) {
+                     if (!owningCell || (owningCell && !owningCell.contains(event.target))) {
+                        menu.classList.add('hidden');
+                     }
                 }
             });
         });
 
+        let currentNotebookId = null; // Stores the ID of the currently selected/editing notebook
 
         // 初始显示仪表盘
         showPage(dashboardPage);
+        renderDashboardTable(); // Populate the table on initial load
 
         // 新增：聊天逻辑
         const chatInput = document.getElementById('chatInput');
         const sendMessageButton = document.getElementById('sendMessageButton');
         const chatBox = document.getElementById('chatBox'); // 获取聊天框元素
 
-        // 函数：添加消息到聊天框
-        function addMessage(text, isUser = false) {
+        // Adds a message to the chat box display (DOM manipulation only).
+        // clearPlaceholder is true by default, meaning it will try to remove the initial placeholder.
+        // When loading multiple messages, pass false for clearPlaceholder for intermediate messages.
+        function addMessageToChatBoxDOM(text, isUser = false, targetChatBox, clearPlaceholder = true) {
+            if (clearPlaceholder) {
+                const placeholder = targetChatBox.querySelector('.initial-chat-placeholder');
+                if (placeholder) {
+                    // console.log("Clearing placeholder");
+                    placeholder.remove();
+                }
+            }
+
             const messageElement = document.createElement('div');
             messageElement.classList.add('flex', isUser ? 'justify-end' : 'items-start');
 
-            const avatarUrl = isUser ? 'https://placehold.co/40x40/A0AEC0/E2E8F0?text=You' : 'https://placehold.co/40x40/E2E8F0/A0AEC0?text=AI'; // 示例头像
+            const avatarUrl = isUser ? 'https://placehold.co/40x40/A0AEC0/E2E8F0?text=You' : 'https://placehold.co/40x40/E2E8F0/A0AEC0?text=AI';
             const avatarAlt = isUser ? '用户头像' : 'AI头像';
 
             messageElement.innerHTML = `
@@ -604,43 +642,66 @@
                 </div>
                 ${isUser ? `<img class="h-8 w-8 rounded-full object-cover ml-3" src="${avatarUrl}" alt="${avatarAlt}">` : ''}
             `;
-             chatBox.appendChild(messageElement);
-             // 滚动到底部
-            chatBox.scrollTop = chatBox.scrollHeight;
+            targetChatBox.appendChild(messageElement);
+            targetChatBox.scrollTop = targetChatBox.scrollHeight;
         }
 
-        // 发送消息函数
+        // Adds a message to the chat, displays it, and saves it to localStorage.
+        function addMessage(text, isUser = false, shouldSave = true) {
+            const localChatBox = document.getElementById('chatBox');
+            // Clear placeholder only if it's currently visible.
+            const doClearPlaceholder = localChatBox.querySelector('.initial-chat-placeholder') !== null;
+
+            addMessageToChatBoxDOM(text, isUser, localChatBox, doClearPlaceholder);
+
+            if (shouldSave && currentNotebookId) {
+                // console.log(`Saving message for notebook ${currentNotebookId}: "${text}"`);
+                const messages = getNotebookMessages(currentNotebookId);
+                messages.push({
+                    text: text,
+                    isUser: isUser,
+                    timestamp: new Date().toISOString()
+                });
+                saveNotebookMessages(currentNotebookId, messages);
+            }
+        }
+
+        // Handles sending a message from the chat input.
         async function sendMessage() {
-            const message = chatInput.value.trim();
-            if (!message) return; // 不发送空消息
+            const messageText = chatInput.value.trim();
+            if (!messageText) return;
 
-            addMessage(message, true); // 添加用户消息到聊天框
-            chatInput.value = ''; // 清空输入框
+            addMessage(messageText, true, true); // User's message, should be saved.
+            chatInput.value = ''; // Clear input field
 
-            // 调用后端 API
+            // Simulate AI response (replace with actual API call later)
+            // console.log("Simulating AI response...");
+            setTimeout(() => {
+                addMessage("这是AI的模拟回复。", false, true); // AI's message, should be saved.
+            }, 500);
+
+            // TODO: Original backend API call can be uncommented when backend is ready
+            /*
             try {
-                const response = await fetch('/chat', { // 假设后端运行在同一域名的 /chat 路径
+                const response = await fetch('/chat', {
                     method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ message: message })
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message: messageText, notebookId: currentNotebookId || undefined }) // Send notebookId if available
                 });
 
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
-
                 const data = await response.json();
-                addMessage(data.response); // 添加 AI 回复到聊天框
-
+                addMessage(data.response, false, true); // AI's message from backend
             } catch (error) {
                 console.error('发送消息失败:', error);
-                addMessage('抱歉，发生了一个错误，无法获取回复。', false); // 显示错误消息
+                addMessage('抱歉，发生了一个错误，无法获取回复。', false, true); // Error message
             }
+            */
         }
 
-        // 绑定事件监听器
+        // Bind event listeners
         if (sendMessageButton) {
             sendMessageButton.addEventListener('click', sendMessage);
         }
@@ -654,6 +715,193 @@
                 }
             });
         }
+
+        // Notebook Data Management Functions
+        const NOTEBOOK_PREFIX = 'knowme_notebooks_';
+        const MESSAGES_PREFIX = 'knowme_messages_';
+
+        // Event listener for notebook title changes
+        if (notebookTitleInput) {
+            notebookTitleInput.addEventListener('blur', () => {
+                if (currentNotebookId) {
+                    const newTitle = notebookTitleInput.value.trim();
+                    const notebooks = getNotebooks(); // Get current notebooks
+                    const currentNotebook = notebooks.find(nb => nb.id === currentNotebookId);
+
+                    // Only update if the title actually changed and is not empty
+                    if (currentNotebook && newTitle && newTitle !== currentNotebook.title) {
+                        updateNotebookTitle(currentNotebookId, newTitle);
+                        // Optional: update document.title or other UI elements if needed
+                    } else if (currentNotebook && !newTitle && currentNotebook.title) {
+                        // If title is cleared, revert to original title to prevent empty titles.
+                        notebookTitleInput.value = currentNotebook.title;
+                    } else if (!newTitle && (!currentNotebook || !currentNotebook.title)) {
+                         // If new notebook title is cleared (was "Untitled notebook") or somehow notebook is gone
+                        notebookTitleInput.value = "Untitled notebook"; // Set back to default
+                        if (currentNotebookId) { // Ensure we have an ID to save against
+                           updateNotebookTitle(currentNotebookId, "Untitled notebook");
+                        }
+                    }
+                }
+            });
+        }
+
+        function formatDisplayDate(isoString) {
+            if (!isoString) return 'N/A';
+            return new Date(isoString).toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' });
+        }
+
+        function renderDashboardTable() {
+            const tableBody = document.getElementById('dashboardTableBody');
+            if (!tableBody) {
+                console.error('Dashboard table body not found!');
+                return;
+            }
+            tableBody.innerHTML = ''; // Clear existing rows
+
+            const notebooks = getNotebooks();
+
+            if (notebooks.length === 0) {
+                const placeholderRow = tableBody.insertRow();
+                const placeholderCell = placeholderRow.insertCell();
+                placeholderCell.colSpan = 6; // Span all columns
+                placeholderCell.textContent = '暂无笔记本。点击 "新建" 来创建一个。';
+                placeholderCell.className = 'px-6 py-4 text-center text-gray-500';
+                return;
+            }
+
+            notebooks.forEach(notebook => {
+                const row = tableBody.insertRow();
+                row.className = 'hover:bg-gray-50 transition-colors group';
+
+                // Icon cell
+                const iconCell = row.insertCell();
+                iconCell.className = 'px-6 py-4 whitespace-nowrap';
+                iconCell.innerHTML = `<svg class="sf-symbol h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 16c1.669 0 3.218-.51 4.5-1.385A7.962 7.962 0 0114.5 16c1.255 0 2.443-.29 3.5-.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"></path></svg>`;
+
+                // Title cell (clickable)
+                const titleCell = row.insertCell();
+                titleCell.className = 'px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-600 hover:text-blue-800 cursor-pointer';
+                titleCell.textContent = notebook.title;
+                titleCell.addEventListener('click', () => {
+                    currentNotebookId = notebook.id;
+                    // TODO: Set notebook title in notebookPage header
+                    // TODO: Load messages for this notebook in notebookPage
+                    showPage(notebookPage);
+                });
+
+                // Source quantity cell
+                const sourcesCell = row.insertCell();
+                sourcesCell.className = 'px-6 py-4 whitespace-nowrap text-sm text-gray-500 hidden sm:table-cell';
+                sourcesCell.textContent = 'N/A'; // Placeholder
+
+                // Creation date cell
+                const createdDateCell = row.insertCell();
+                createdDateCell.className = 'px-6 py-4 whitespace-nowrap text-sm text-gray-500 hidden md:table-cell';
+                createdDateCell.textContent = formatDisplayDate(notebook.createdAt);
+
+                // Role cell
+                const roleCell = row.insertCell();
+                roleCell.className = 'px-6 py-4 whitespace-nowrap text-sm text-gray-500 hidden lg:table-cell';
+                roleCell.textContent = 'Owner'; // Placeholder
+
+                // Actions cell
+                const actionsCell = row.insertCell();
+                actionsCell.className = 'px-6 py-4 whitespace-nowrap text-right text-sm font-medium';
+
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = '删除';
+                deleteButton.className = 'text-red-600 hover:text-red-800 transition-colors';
+                deleteButton.addEventListener('click', (event) => {
+                    event.stopPropagation(); // Prevent row click event
+                    if (confirm(`确定要删除笔记本 "${notebook.title}" 吗？此操作无法撤销。`)) {
+                        deleteNotebookStorage(notebook.id);
+                        renderDashboardTable(); // Refresh table
+                    }
+                });
+                actionsCell.appendChild(deleteButton);
+            });
+        }
+
+
+        function generateId() {
+            return Date.now().toString();
+        }
+
+        function getNotebooks() {
+            const notebooksJSON = localStorage.getItem(NOTEBOOK_PREFIX + 'list');
+            if (!notebooksJSON) return []; // Return empty array if no data
+            try {
+                return JSON.parse(notebooksJSON);
+            } catch (e) {
+                console.error("Error parsing notebooks from localStorage:", e);
+                // localStorage.removeItem(NOTEBOOK_PREFIX + 'list'); // Optionally clear corrupted data
+                return []; // Return empty array on error
+            }
+        }
+
+        function saveNotebooks(notebooksArray) {
+            try {
+                localStorage.setItem(NOTEBOOK_PREFIX + 'list', JSON.stringify(notebooksArray));
+            } catch (e) {
+                console.error("Error saving notebooks to localStorage:", e);
+                // Potentially notify user if storage is full
+            }
+        }
+
+        function getNotebookMessages(notebookId) {
+            const messagesJSON = localStorage.getItem(MESSAGES_PREFIX + notebookId);
+            if (!messagesJSON) return []; // Return empty array if no data
+            try {
+                return JSON.parse(messagesJSON);
+            } catch (e) {
+                console.error(`Error parsing messages for notebook ${notebookId} from localStorage:`, e);
+                // localStorage.removeItem(MESSAGES_PREFIX + notebookId); // Optionally clear corrupted data
+                return []; // Return empty array on error
+            }
+        }
+
+        function saveNotebookMessages(notebookId, messagesArray) {
+            try {
+                localStorage.setItem(MESSAGES_PREFIX + notebookId, JSON.stringify(messagesArray));
+            } catch (e) {
+                console.error(`Error saving messages for notebook ${notebookId} to localStorage:`, e);
+                 // Potentially notify user if storage is full
+            }
+        }
+
+        function deleteNotebookStorage(notebookId) {
+            const notebooks = getNotebooks();
+            const updatedNotebooks = notebooks.filter(notebook => notebook.id !== notebookId);
+            saveNotebooks(updatedNotebooks);
+            localStorage.removeItem(MESSAGES_PREFIX + notebookId);
+        }
+
+        function addNotebook(notebookTitle) {
+            const notebooks = getNotebooks();
+            const newNotebook = {
+                id: generateId(),
+                title: notebookTitle,
+                createdAt: new Date().toISOString()
+            };
+            notebooks.push(newNotebook);
+            saveNotebooks(notebooks);
+            // Initialize empty messages for the new notebook
+            saveNotebookMessages(newNotebook.id, []);
+            return newNotebook;
+        }
+
+        function updateNotebookTitle(notebookId, newTitle) {
+            const notebooks = getNotebooks();
+            const notebookIndex = notebooks.findIndex(notebook => notebook.id === notebookId);
+            if (notebookIndex !== -1) {
+                notebooks[notebookIndex].title = newTitle;
+                saveNotebooks(notebooks);
+                return notebooks[notebookIndex];
+            }
+            return null; // Or throw an error if notebook not found
+        }
+
     </script>
 </body>
 </html>
